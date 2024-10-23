@@ -4,7 +4,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - run:  echo "Hello World"
+            - run:  |
+                    echo "Hello World"
+                    sleep 10
               name: "Hello World"
     second_job:
         runs-on: ubuntu-latest
@@ -16,3 +18,11 @@ jobs:
         steps:
             - run:  exit -1
               name: "Error Code Exit"
+    
+    fourth_job:
+        runs-on: ubuntu-latest
+        steps:
+            - run:  |
+                    echo "4th "
+                    sleep 13
+              name: "Fourth fun"
