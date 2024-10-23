@@ -1,7 +1,8 @@
 name: first test
-on: [workflow_displatch]
+on: [workflow_dispatch]
 jobs:
     first_job:
         runs-on:    ubuntu-latest
         steps:
             - run:  echo "Hello World"
+              name:  "Hello World"
