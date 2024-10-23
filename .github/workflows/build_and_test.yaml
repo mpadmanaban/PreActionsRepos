@@ -1,0 +1,13 @@
+name: build and test
+on: [push]
+jobs:
+    pull_code:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: show folder content
+              run: ls -l
+            - uses: actions/checkout@v4
+              name: "Git Checkout"
+            - name: show folder content
+              run: ls -l
+        

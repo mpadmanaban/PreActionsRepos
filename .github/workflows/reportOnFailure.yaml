@@ -1,5 +1,5 @@
 name: report on failure
-on: [push]
+on: [workflow_dispatch]
 jobs:
     fake_build:
         runs-on: ubuntu-latest
