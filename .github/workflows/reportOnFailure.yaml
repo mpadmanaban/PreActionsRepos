@@ -6,8 +6,8 @@ jobs:
         steps:
             - run:  |
                     echo "Fake Build"
-                    sleep 10
-                    exit 1
+                    sleep 4
+                    exit 0
               name: "Fake Build"
         
     fake_test:
@@ -16,7 +16,7 @@ jobs:
         steps:
             - run:  |
                     echo "Fake dependent test"
-                    sleep 10
+                    sleep 4
               name: "Fake dependent test"
               
     report_failure:
@@ -26,7 +26,7 @@ jobs:
         steps:
             - run:  |
                     echo "Report on Failure"
-                    sleep 10
+                    sleep 4
               name: "Report on Failure"
     
     report_on_success:
@@ -36,7 +36,7 @@ jobs:
         steps:
             - run:  |
                     echo "Report on Success"
-                    sleep 10
+                    sleep 4
               name: "Report on Success"
 
     report_to_team:
@@ -45,6 +45,5 @@ jobs:
         if: always()
         steps:
             - run:  |
-                    echo "Report to teams"
-                    sleep 10
+                    echo "Report to teams"                    
               name: "Report to teams"
