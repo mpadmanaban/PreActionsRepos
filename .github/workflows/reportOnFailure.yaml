@@ -28,3 +28,23 @@ jobs:
                     echo "Report on Failure"
                     sleep 10
               name: "Report on Failure"
+    
+    report_on_success:
+        runs-on: ubuntu-latest
+        needs:  fake_build
+        if: success()
+        steps:
+            - run:  |
+                    echo "Report on Success"
+                    sleep 10
+              name: "Report on Success"
+
+    report_to_team:
+        runs-on: ubuntu-latest
+        needs:  fake_build
+        if: always()
+        steps:
+            - run:  |
+                    echo "Report to teams"
+                    sleep 10
+              name: "Report to teams"
