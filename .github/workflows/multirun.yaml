@@ -19,4 +19,7 @@ jobs:
               run: ls -l
             - name: build
               run: dotnet build
+            - name: test
+              run: dotnet test
+              continue-on-error: true
     
