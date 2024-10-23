@@ -33,8 +33,7 @@ namespace ConsoleApp.Tests
             var email = "jane.doe@example.com";
             var password = "password456";
             var user = new User(firstName, lastName, email, password);            
-            var expectedOutput = $"First Name: {firstName}{Environment.NewLine}Last Name: {lastName}{Environment.NewLine}Email: {email}{Environment.NewLine}Password: {password}{Environment.NewLine}";
-
+            var expectedOutput = $"First Name: {firstName}\nLast Name: {lastName}\nEmail: {email}\nPassword: {password}\n";
             // Act
             using (var sw = new System.IO.StringWriter())
             {
