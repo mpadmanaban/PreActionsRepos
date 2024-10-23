@@ -1,4 +1,4 @@
-name: dependent jobs
+name: dependent jobs2
 on: [push]
 jobs:
     fake_build:
