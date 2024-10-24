@@ -1,0 +1,15 @@
+name: schedule jobs
+on: 
+  schedule:
+    - cron: '35 18 * * *'
+  #push:
+  #  paths:
+  #     - "*schedule_jobs.yaml*"
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: echo Hello World
+              run: |
+                  echo "Hello World"
+            
