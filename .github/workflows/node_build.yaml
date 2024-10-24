@@ -1,5 +1,9 @@
 name: nodebuild
-on: [push, workflow_dispatch]
+on: 
+    push:
+        paths:
+            - "**node_build.yaml"
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
