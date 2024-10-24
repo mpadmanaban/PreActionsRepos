@@ -1,10 +1,10 @@
 name: using vars 2
-on: [workflow_dispatch]
+on: [push]
 jobs:
     show_vars_prod:
         runs-on: ubuntu-latest
         environment: production
-        needs: show_vars_dev
+        needs: shows_vars_dev
         steps:
             - run:  |
                     echo ${{vars.NEW_ENV_VAR}} 
