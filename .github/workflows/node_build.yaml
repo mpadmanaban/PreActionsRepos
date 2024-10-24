@@ -13,4 +13,4 @@ jobs:
             - name: pull modules
               run: |
                     cd nodejs
-                    npm isntall
+                    npm install
