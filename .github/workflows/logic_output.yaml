@@ -28,4 +28,4 @@ jobs:
       - name: show logic output
         run:  |
             dotnet build
-        if: ${{github.event_name =='push'}}
+    if: ${{github.event_name =='push'}}
