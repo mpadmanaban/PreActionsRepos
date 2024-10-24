@@ -1,0 +1,19 @@
+name: contexts
+on:
+   push:
+      paths:
+        - "**contexts.yaml**"
+   workflow_dispatch:
+   issues:
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Contexts
+        run:  |
+            echo "github: ${{toJson(github)}}"
+            echo "secrets: ${{toJson(secrets)}}"
+            echo "job: ${{toJson(job)}}"
+            echo "runner: ${{toJson(runner)}}"
+            

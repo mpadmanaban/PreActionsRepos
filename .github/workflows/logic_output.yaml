@@ -1,5 +1,11 @@
 name: logic output
-on: [push, workflow_dispatch, issues]
+on:
+   push:
+      paths:
+        - "**logic_output.yaml**"
+   workflow_dispatch:
+   issues:
+
 jobs:
   hello_world:
     runs-on: ubuntu-latest
