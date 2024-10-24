@@ -21,4 +21,4 @@ jobs:
                     cd nodejs
                     npm install
             - name: check_cache
-              run: echo "Cache hit {{steps.cache_modules.outputs}}"
+              run: echo "Cache hit ${{steps.cache_modules.outputs}}"
