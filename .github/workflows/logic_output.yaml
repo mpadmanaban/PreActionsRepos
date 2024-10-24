@@ -1,10 +1,22 @@
 name: logic output
 on: [push]
 jobs:
-  hellow_world:
+  hello_world:
     runs-on: ubuntu-latest
     steps:
       - run:  |
-             echo ${{vars.NEW_REPO_VAR}}
+             echo "Hello World"
         name: Hello World
 
+  hellow_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show logic output
+        run:  |
+              echo ${{1}}
+              echo ${{NULL}}
+              echo "is 4=3 ${{4==3}}"
+              echo "is 4!=3 ${{4!=3}}"
+              echo "is 4>3 ${{4>3}}"
+              echo "is 3>4 ${{3>4}}"
+              name: Logic output
