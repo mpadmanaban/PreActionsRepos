@@ -1,0 +1,9 @@
+name: logic output
+on: [push]
+jobs:
+  hellow_world:
+    runs-on: ubuntu-latest
+    steps:
+      - run:  |
+              echo ${{vars.NEW_ENV_VAR}} 
+
