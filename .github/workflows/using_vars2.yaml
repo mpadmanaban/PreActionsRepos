@@ -4,13 +4,14 @@ jobs:
     show_vars_prod:
         runs-on: ubuntu-latest
         environment: production
+        needs: shows_vars_dev
         steps:
             - run:  |
-                    echo ${{vars.NEW_PROD_ENV_VAR}} 
+                    echo ${{vars.NEW_ENV_VAR}} 
 
     show_vars_dev:
         runs-on: ubuntu-latest
-        environment: production
+        environment: development
         steps:
             - run:  |
-                    echo ${{vars.NEW_PROD_ENV_VAR}}                                            
+                    echo ${{vars.NEW_ENV_VAR}}                                            
