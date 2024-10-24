@@ -7,5 +7,5 @@ jobs:
         steps:
             - run:  |
                     echo ${{vars.NEW_PROD_ENV_VAR}}                                
-                      name: "Show Vars" 
+            name: "Show Vars" 
     
