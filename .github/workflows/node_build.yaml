@@ -11,7 +11,7 @@ jobs:
             - name: use Cache for node packages
               uses: actions/cache@v4
               with: 
-                path: nodejs/modules
+                path: nodejs/node_modules
                 key:  our_modules
             
             - name: show folder content after checkout
@@ -20,4 +20,3 @@ jobs:
               run: |
                     cd nodejs
                     npm install
-                    
