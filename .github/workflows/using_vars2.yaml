@@ -1,0 +1,10 @@
+name: using vars
+on: [push]
+jobs:
+    show_vars:
+        runs-on: ubuntu-latest
+        steps:
+            - run:  |
+                    echo ${{vars.NEW_REPO_VAR}}                                  
+        
+    
