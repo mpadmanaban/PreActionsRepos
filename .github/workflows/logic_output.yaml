@@ -5,5 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run:  |
-              echo ${{vars.NEW_ENV_VAR}} 
+             echo ${{vars.NEW_REPO_VAR}}
+        name: Hello World
 
