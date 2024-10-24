@@ -1,5 +1,5 @@
 name: nodebuild
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -8,6 +8,12 @@ jobs:
               run: ls -l
             - uses: actions/checkout@v4
               name: "Git Checkout"
+            - name: use Cache for node packages
+              uses: actions/cache@v4
+              with: 
+                path: nodejs/modules
+                key:  our_modules
+            
             - name: show folder content after checkout
               run: ls -l
             - name: pull modules
