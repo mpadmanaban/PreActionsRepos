@@ -1,5 +1,5 @@
 name: logic output
-on: [push, workflow_dispatch]
+on: [push, workflow_dispatch, issues]
 jobs:
   hello_world:
     runs-on: ubuntu-latest
