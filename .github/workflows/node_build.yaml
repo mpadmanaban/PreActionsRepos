@@ -1,17 +1,16 @@
-name: using vars 2
+name: nodebuild
 on: [push]
 jobs:
-    show_vars_prod:
+    build:
         runs-on: ubuntu-latest
-        environment: production
-        needs: shows_vars_dev
-        steps:
-            - run:  |
-                    echo ${{vars.NEW_ENV_VAR}} 
-
-    show_vars_dev:
-        runs-on: ubuntu-latest
-        environment: development
-        steps:
-            - run:  |
-                    echo ${{vars.NEW_ENV_VAR}}                                            
+        steps: 
+            - name: show folder content before checkout
+              run: ls -l
+            - uses: actions/checkout@v4
+              name: "Git Checkout"
+            - name: show folder content after checkout
+              run: ls -l
+            - name: pull modules
+              run: |
+                    cd nodejs
+                    npm isntall
