@@ -14,7 +14,7 @@ jobs:
       - name: show logic output
         run:  |
               echo ${{1}}
-              echo ${{NULL}}
+              echo ${{null}}
               echo "is 4=3 ${{4==3}}"
               echo "is 4!=3 ${{4!=3}}"
               echo "is 4>3 ${{4>3}}"
