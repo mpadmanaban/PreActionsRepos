@@ -1,10 +1,11 @@
-name: using vars
+name: using vars 2
 on: [push]
 jobs:
     show_vars:
         runs-on: ubuntu-latest
+        environment: production
         steps:
             - run:  |
-                    echo ${{vars.NEW_REPO_VAR}}                                  
-        
+                    echo ${{vars.NEW_PROD_ENV_VAR}}                                
+                      name: "Show Vars" 
     
