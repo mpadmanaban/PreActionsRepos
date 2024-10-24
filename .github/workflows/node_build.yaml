@@ -12,7 +12,7 @@ jobs:
               uses: actions/cache@v4
               with: 
                 path: nodejs/node_modules
-                key:  our_modules
+                key:  "our_modules-${{hashFiles('nodejs/package-lock.json')}}"
               id:  cache_modules
             - name: show folder content after checkout
               run: ls -l
