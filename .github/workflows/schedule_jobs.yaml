@@ -1,7 +1,7 @@
 name: schedule jobs
 on: 
   schedule:
-    - cron: '35 18 * * *'
+    - cron: '34 01 * * *'
   #push:
   #  paths:
   #     - "*schedule_jobs.yaml*"
